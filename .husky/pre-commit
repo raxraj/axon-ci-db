@@ -1,1 +1,1 @@
-npm run db:generate
+npm run migrate:generate
