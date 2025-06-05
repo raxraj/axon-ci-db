@@ -1,0 +1,29 @@
+{
+  "name": "axon-ci-db",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "migrate:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "migrate:push": "ts-node src/db/migrate.ts",
+    "migrate:status": "drizzle-kit status --config=drizzle.config.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "drizzle-kit": "^0.31.1",
+    "drizzle-orm": "^0.44.2",
+    "mysql2": "^3.14.1",
+    "typed-environment": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "husky": "^9.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
